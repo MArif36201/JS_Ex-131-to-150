@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>
+        Ex !37
+    </title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <h1>
+        JavaScript: Reverse the bits of a given 16 bits unsigned short integer
+    </h1>
+    <h3>
+        Solution:
+    </h3>
+    <script>
+        function sixteen_bits_reverse(num) {
+	var result = 0;
+	for (var i = 0; i < 16; i++) 
+    {
+		result = result * 2 + (num % 2);
+		num = Math.floor(num / 2);
+	}
+	return result;
+}
+document.write(sixteen_bits_reverse(12345));
+// document.write(sixteen_bits_reverse(10));
+// document.write(sixteen_bits_reverse(5));
+
+    </script>
+</body>
+</html>

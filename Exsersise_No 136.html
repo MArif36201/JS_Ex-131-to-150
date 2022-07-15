@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>
+        Ex 135
+    </title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <h1>
+        JavaScript: Replace the first digit in a string (should contains at least digit) with $ character
+    </h1>
+    <h3>
+        Solution:
+    </h3>
+    <script>
+     function replace_first_digit(input_str) {
+
+return input_str.replace(/[0-9]/, '$');
+}
+document.write(replace_first_digit("abc1dabc"));
+document.write("<br>")
+document.write(replace_first_digit("p3ython"));
+document.write("<Br>")
+document.write(replace_first_digit("ab1cabc"));   
+
+    </script>
+</body>
+</html>

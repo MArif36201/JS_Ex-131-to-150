@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>
+        Ex No 135
+    </title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <h1>\
+        JavaScript: Remove all characters from a given string that appear more than once
+    </h1>
+    <h2>
+        String is 
+    </h2>
+    <h3>
+        Solution:
+    </h3>
+    <script>
+        function remove_duplicate_cchars(str) {
+  var arr_char = str.split("");
+  var result_arr = [];
+
+  for (var i = 0; i < arr_char.length; i++) {
+    if (str.indexOf(arr_char[i]) === str.lastIndexOf(arr_char[i]))
+      result_arr.push(arr_char[i]);
+    }
+
+  return result_arr.join("");
+}
+document.write(remove_duplicate_cchars("abcdabc"));
+document.write(remove_duplicate_cchars("python"));
+document.write(remove_duplicate_cchars("abcabc"));
+document.write(remove_duplicate_cchars("1365451"));
+
+    </script>
+</body>
+</html>

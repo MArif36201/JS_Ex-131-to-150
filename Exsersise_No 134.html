@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>
+        Ex No 134
+    </title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <h1>
+        JavaScript: Change the characters (lower case) in a string where a turns into z, b turns into y, c turns into x, ..., n turns into m, m turns into n, ..., z turns into a
+    </h1>
+    <h4>Solution:</h4>
+    <script>
+        function change_char(str1) {
+	var result = [];
+	for (var i = 0; i < str1.length; i++)
+    {
+		var char_order = str1.charCodeAt(i) - 'a'.charCodeAt(0),
+			change_char = 25 - char_order + 'a'.charCodeAt(0);
+		result.push(String.fromCharCode(change_char));
+	}
+	return result.join("");
+}
+document.write(change_char("abcxyz"));
+document.write(change_char("python"));  
+
+    </script>
+</body>
+</html>

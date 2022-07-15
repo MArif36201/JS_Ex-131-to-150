@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>
+        Ex_No 143
+    </title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <h1>
+        JavaScript: Sort the strings of a given array of strings in the order of increasing lengths
+    </h1>
+    <h3>Solution:</h3>
+    <script>
+        function sort_by_string_length(arra) {
+	for (var i = 0; i < arra.length; i++) {
+		for (var j = i + 1; j < arra.length; j++) {
+			if (arra[i].length > arra[j].length) {
+				var m = arra[i];
+				arra[i] = arra[j];
+				arra[j] = m;
+			}
+		}
+	}
+	return arra;
+}
+var arra = ["xyz","acd","aa","bb","zzz","", "a","b"];
+document.write("Original array: "+ arra+"\n");
+document.write("<br>")
+document.write(sort_by_string_length(["xyz","acd","aa","bb","zzz","", "a","b"]));
+
+    </script>
+    
+</body>
+</html>

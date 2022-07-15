@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>
+        Ex_No 149
+    </title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body><h1>
+    JavaScript: Change the capitalization of all letters in a given string
+</h1>
+<h3>Solution:</h3>
+<script>
+    function change_case(txt) {
+    var str1 = "";
+    for (var i = 0; i < txt.length; i++) {
+        if (/[A-Z]/.test(txt[i])) str1 += txt[i].toLowerCase();
+        else str1 += txt[i].toUpperCase();
+    }
+    return str1;
+}
+
+document.write(change_case("w3resource"));
+document.write("<br>")
+document.write(change_case("Germany"));
+
+</script>
+    
+</body>
+</html>

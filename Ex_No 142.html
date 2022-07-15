@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>
+        Ex_No 142
+    </title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <h1>JavaScript: Simplify a given absolute path for a file in Unix-style</h1>
+    <h3>Solution:</h3>
+    <script>
+           function simplify_path(main_path) {
+  var parts = main_path.split('/'),
+      new_path = [],
+      length = 0;
+  for (var i = 0; i < parts.length; i++) {
+    var part = parts[i];
+    if (part === '.' || part === '' || part === '..') {
+      if (part === '..' && length > 0) {
+        length--;
+      }
+      continue;
+    }
+    new_path[length++] = part;
+  }
+
+  if (length === 0) {
+    return '/';
+  }
+
+  var result = '';
+  for (var i = 0; i < length; i++) {
+    result +=  '/'+new_path[i] ;
+  }
+
+  return result;
+}
+document.write(simplify_path("/home/var/./www/../html//sql/"));
+
+    </script>
+    
+</body>
+</html>

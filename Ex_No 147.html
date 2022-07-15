@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>
+        Ex_No 147
+    </title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <h1>
+        JavaScript: Compute the sum of all digits that occur in a given string
+    </h1>
+    <h3>
+        Solution:
+    </h3>
+    <script>
+        function sum_digits_from_string(dstr) {
+  var dsum = 0;
+
+  for (var i = 0; i < dstr.length; i++)
+  {
+
+    if (/[0-9]/.test(dstr[i])) dsum += parseInt(dstr[i])
+  }
+  return dsum;
+}
+
+document.write(sum_digits_from_string("abcd12efg9"))
+document.write("<br>")
+document.write(sum_digits_from_string("w3resource"))
+
+    </script>
+    
+</body>
+</html>

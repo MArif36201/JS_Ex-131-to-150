@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>
+        Ex_No 132
+    </title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <script>
+        function prime_factors(num) {
+  function is_prime(num) {
+    for (let i = 2; i <= Math.sqrt(num); i++)
+    {
+      if (num % i === 0) return false;
+    }
+    return true;
+  }
+  const result = [];
+  for (let i = 2; i <= num; i++)
+  {
+    while (is_prime(i) && num % i === 0) 
+    {
+      if (!result.includes(i)) result.push(i);
+      num /= i;
+    }
+  }
+  return result;
+}
+document.write(prime_factors(100));
+document.write(prime_factors(101));
+document.write(prime_factors(103));
+document.write(prime_factors(104));
+document.write(prime_factors(105));
+
+    </script>
+    
+</body>
+</html>

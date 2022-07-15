@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>
+        Ex_No 144
+    </title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <h1>
+        JavaScript: Break an address of an url and put it's part into an array
+    </h1>
+    <h3>Solution:</h3>
+    <script>
+        function break_address(url_add) {
+    var data = url_add.split("://")
+    var protocol = data[0];
+    data = data[1].split(".com");
+    var domain = data[0];
+    data = data[1].split("/");
+
+    if(data[1]){
+        return [protocol,domain,data[1]]
+    }
+
+    return [protocol,domain]
+}
+
+var url_add = "https://www.youtube.com/c/CodeWithHarry"
+document.write("Original address: "+url_add)
+document.write("<br>")
+document.write(break_address(url_add))
+
+    </script>
+    
+</body>
+</html>

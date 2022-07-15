@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>
+        Ex_No 145
+    </title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <h1>JavaScript: Find the maximum integer n</h1>
+    <h3>Solution:</h3>
+    <script>
+        function sumn(val) {
+  var sn = 0;
+  var i = 0;
+  while (sn <= val) {
+    sn += i++;
+  }
+  return i - 2;
+}
+document.write(sumn(11))
+document.write("<br>")
+document.write(sumn(15))
+
+    </script>
+    
+</body>
+</html>
